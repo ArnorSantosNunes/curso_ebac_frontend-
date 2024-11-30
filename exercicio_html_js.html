@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>exercicio_html_js</title>
+</head>
+<body>
+    <style>
+            body {
+        display: flex;
+        justify-content: center;   
+        height: 100vh;          
+        margin-top: 50px;            
+        }
+        .container form{
+            width: 300px;
+            background-color: rgb(70, 70, 70);
+            gap: 5px;
+            display: flex;
+            flex-direction: column;
+            padding: 15%;
+        }
+    </style>
+    <div class="container">
+        <form>
+        <input id="num1" type="number" placeholder="Número A" required />
+        <input id="num2" type="number" placeholder="Número B" required />
+        <button id="verificar">Verificar</button>
+    </form>
+    </div>
+<script>
+    let valor = document.getElementById("verificar");
+
+    function calcular() {
+
+    let camp1 = document.getElementById("num1").value;
+    let camp2 = document.getElementById("num2").value;
+
+    if (camp1 < camp2) {
+        alert(`Validação feita com Sucesso😃, o Campo B: (${camp2}) é maior que o Campo A: (${camp1}) 🌹`);
+    } else {
+        alert(`Validação invalida😥, o Campo B: (${camp2}) é menor que o Campo A: (${camp1}) 🥀`);
+    }
+}
+
+    valor.addEventListener("click", () => {
+        calcular();
+    });
+</script>
+</body>
+</html>
